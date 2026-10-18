@@ -1,0 +1,21 @@
+# build output
+build/
+
+# signing material - never commit
+keystore/
+*.jks
+*.keystore
+
+# test fixtures and any book content
+testdata/
+*.epub
+
+# python
+__pycache__/
+*.pyc
+
+# editors / os
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
