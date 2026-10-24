@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ESJ 收藏下载</string>
+    <string name="login_title">登录 ESJ Zone</string>
+    <string name="subtitle">登录后从「我的收藏」下载</string>
+    <string name="search_hint">搜索收藏的书名</string>
+    <string name="clear">清空</string>
+    <string name="refresh">刷新</string>
+    <string name="empty">收藏夹是空的，或者还没登录</string>
+    <string name="login_needed">需要先登录 ESJ Zone 账号</string>
+    <string name="login_now">去登录</string>
+    <string name="login_done">已完成登录</string>
+    <string name="login_hint">请在下方页面登录，登录成功后会自动返回</string>
+    <string name="logout">退出登录</string>
+    <string name="guest">未登录</string>
+    <string name="sort_new">最新收藏</string>
+    <string name="sort_update">最新更新</string>
+    <string name="pipeline_note">下载的内容会打包成 EPUB 保存到「下载/ESJZone小说」。</string>
+
+    <string name="nav_favorites">收藏</string>
+    <string name="nav_downloads">下载</string>
+    <string name="nav_library">已下载</string>
+    <string name="nav_tools">工具</string>
+
+    <string name="picker_title">选择章节</string>
+    <string name="picker_loading">正在读取目录…</string>
+    <string name="select_all">全选</string>
+    <string name="select_none">全不选</string>
+    <string name="download_selected">下载所选</string>
+    <string name="download_all">全部下载</string>
+    <string name="picker_failed">目录读取失败</string>
+
+    <string name="downloads_title">下载</string>
+    <string name="downloads_empty">当前没有下载任务</string>
+    <string name="resume_pending">继续未完成任务</string>
+    <string name="cancel">取消</string>
+    <string name="close">关闭</string>
+    <string name="open">打开</string>
+    <string name="delete">删除</string>
+    <string name="retry">重试</string>
+
+    <string name="library_title">已下载</string>
+    <string name="library_empty">还没有已下载的书</string>
+
+    <string name="tools_title">离线工具</string>
+    <string name="tools_hint">以下功能完全离线，仅对本机 EPUB 文件操作，不需要联网。</string>
+    <string name="tools_split">按章节拆分 EPUB</string>
+    <string name="tools_split_hint">列出每章大小，可导出为多个文件或合并成一个。</string>
+    <string name="tools_compress">压缩 EPUB 插图</string>
+    <string name="tools_compress_hint">把插图长边缩到 1600px 并转 JPEG，明显减小体积。</string>
+    <string name="tools_pick">选择本机 EPUB</string>
+
+    <string name="split_title">拆分 EPUB</string>
+    <string name="split_loading">正在解析 EPUB…</string>
+    <string name="split_mode_one">每章一个文件</string>
+    <string name="split_mode_merge">合并成一个</string>
+    <string name="split_export">导出所选</string>
+    <string name="compress_title">压缩插图</string>
+    <string name="compress_start">开始压缩</string>
+    <string name="working">处理中…</string>
+    <string name="split_mode_group">每 N 话一组</string>
+    <string name="split_group_hint">每几话一个文件</string>
+    <string name="split_group_export">导出分组</string>
+    <string name="text_only">仅下载文字（不下载插图）</string>
+</resources>
