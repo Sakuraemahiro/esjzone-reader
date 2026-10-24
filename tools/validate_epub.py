@@ -1,5 +1,6 @@
 """Validate an EPUB produced by the app's EpubBuilder."""
 import os
+import posixpath
 import re
 import sys
 import zipfile
@@ -105,6 +106,26 @@ def check(path):
             if sorted(orders) != list(range(1, len(orders) + 1)):
                 fail("ncx playOrder is not a clean 1..n sequence")
             print("  ncx: %d points" % len(points))
+
+        # --- navigation targets must actually resolve inside the archive
+        if nav_name is not None:
+            nav_dir = posixpath.dirname(nav_name)
+            for href in links:
+                target = posixpath.normpath(posixpath.join(nav_dir, href.split("#")[0]))
+                if target not in names:
+                    fail("nav target does not resolve: %s -> %s" % (href, target))
+        if ncx_name is not None:
+            ncx_dir = posixpath.dirname(ncx_name)
+            for point in points:
+                content = point.find("ncx:content", NS)
+                src = content.get("src") if content is not None else None
+                if not src:
+                    fail("ncx navPoint has no content src")
+                    continue
+                target = posixpath.normpath(posixpath.join(ncx_dir, src.split("#")[0]))
+                if target not in names:
+                    fail("ncx target does not resolve: %s -> %s (ncx lives in %s)"
+                         % (src, target, ncx_dir or "the root"))
 
         # --- every document well formed, every image reference resolvable
         referenced = set()
